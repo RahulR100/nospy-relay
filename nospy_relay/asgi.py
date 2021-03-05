@@ -8,8 +8,9 @@ https://docs.djangoproject.com/en/3.1/howto/deployment/asgi/
 """
 
 import os
-
+import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'nospy_relay.settings')
+django.setup()
 
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
